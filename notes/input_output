@@ -1,0 +1,4 @@
+	输入：print()括号中加上字符串输出，多个字符串用逗号隔开，逗号输出为空格 
+		print('hello','world')
+	输入：input()用于输入字符串并存放一个变量里，括号内可以为提示语句
+		Name = input('please input your name: ')
