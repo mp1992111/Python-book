@@ -1,0 +1,17 @@
+打印以下变量值：
+n = 123
+f = 456.789
+s1 = 'Hello, world'
+s2 = 'Hello, \'Adam\''
+s3 = r'Hello, "Bart"'
+s4 = r'''Hello,
+Lisa!'''
+
+>>>
+print('123')
+print('456.789')
+print('hello, world')
+print('hello, \\\'Adam\\\'')
+print(r'hello,"bart"')
+print('''hello,
+Lisa!''')
