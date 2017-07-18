@@ -49,9 +49,22 @@
       2
   
   
-  ##格式化
+##格式化
     使用%?格式化字符串
-    
+   
+   
+##list和tuple
+  list列表是有序集合，如：classmates=['Make','Bob','Tony']
+    len()可获取list元素个数,如：len(classmates)
+    使用索引访问list中元素，如：classmates[1]，-1作索引可以获取最后一个元素
+    list可变:
+      append追加元素到队尾：classmates append('Adm')
+      insert插入元素至指定位置：classmates insert(1，‘Jack’)
+      删除队尾元素：classmates pop()
+      删除指定位置元素：classmates pop(1)
+    list中元素类型可不同，可存在包含关系
+  tuple类似list，不同在于初始化后不可变
+    定义一个只有一个元素的tuple使用：t = (1,)
     
     
     
