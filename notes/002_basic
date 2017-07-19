@@ -72,6 +72,24 @@
   intput()返回数据类型为str
     
     
+##循环
+  Python有两种循环：
+	- for...in循环,依次迭代列表中元素
+	  range()用以生成整数序列
+	- while循环，条件不满足就不断循环
+
+	break语句可提前退出循环
+	continue语句可跳过当前循环
+  
+  
+## dict和set
+	- dict：dictionary，字典，键值对，一个value对应一个key
+	  可通过in判断key是否存在，或者get方法若key不存在则返回None
+	  pop(key)方法可删除一个键值对
+	- set：类似dict，但不存储value，元素不重复且无序
+	  add(key)方法添加元素；
+	  remove(key)方法删除元素
+  
     
     
     
