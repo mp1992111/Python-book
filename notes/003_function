@@ -1,0 +1,29 @@
+# 代码出现有规律的重复时，可使用函数
+## 调用函数
+  Python内置函数可直接调用，可使用help()方法查看函数帮助信息
+  函数名即指向一个函数的引用
+  - 数据类型转换
+    常用函数包括数据类型转换函数，如int()、float()、str()、bool()等
+    
+    
+## 定义函数
+  使用def语句定义，返回值用return返回，若没有return，函数执行完毕返回None
+  保存的函数可以使用Python解释器from xx import xx导入函数
+  - 空函数
+    使用pass语句用作占位符，例如：def nop(): pass
+    pass也可用于其他语句
+    
+  - 参数检查
+    调用函数时，若参数个数错误，Python会抛出TypeError；
+    参数数据类型检查可以使用isinstance()内置函数检查，检查到错误会抛出，例如：
+    def my_abs(x):
+      if not isinstance(x,(int,float)):
+        raise TypeError('bad operand type') #此时传入参数只允许整数和浮点数，否则抛出错误
+      if x>=0:
+        return x
+      else:
+        return -x
+        
+  - 返回多个值
+    import math语句表示导入math包，允许后续代码使用math包中函数
+    返回多个值实质为返回tuple，括号被省略
