@@ -67,7 +67,7 @@
       for num in numbers:
         sum = sum+n*n
       return sum
-    参数前加上*，参数numbers接收到的是一个tuple即可定义可变参数
+    参数前加上*，参数numbers接收到的是一个tuple即可定义可变参数,参数个数任意
     
   - 关键字参数
     关键字参数允许传入0个或任意个含参数名的参数，这些关键字参数自动在函数内部组装为dict
@@ -105,4 +105,21 @@
     命名的关键字参数是为了限制调用者可以传入的参数名，同时可以提供默认值。
     定义命名的关键字参数在没有可变参数的情况下不要忘了写分隔符*，否则定义的将是位置参数。
     
+
+## 递归函数
+   可在函数内部调用自身的函数称为递归函数，例如：
+   def fact(n):
+      if n=1:
+        return 1
+      return n*fact(n-1)
+   此函数用来计算n！阶乘。
+   递归函数逻辑简单，需注意防止栈溢出，可通过尾递归优化
+   尾递归是指函数返回时，调用自身，且return不能包含表达式。例如：
+   def fact(n):
+      return fact_iter(n,1)
+   def fact_iter(num,product):
+      if num=1:
+        return product
+      return fact_iter(num-1,num*product)
+   python解释器未针对尾递归优化
       
