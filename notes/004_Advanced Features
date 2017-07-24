@@ -9,3 +9,32 @@
    >>>'ABCDEFGHIJKLMN'[::3]  #所有字符每隔3个取一个
    'ADGJM'
    
+   
+## 迭代
+   使用for循环遍历称为迭代，list或tuple可使用迭代，dict也可使用迭代，但迭代结果顺序可能不一样
+   默认迭代dict结果是key，可使用for value in d.values()迭代value，使用for k,v in d.items()同时迭代key和value
+   字符串也可迭代，判断是否可迭代使用collections模块的Iterable：
+   >>>from collection import Iterable
+   >>>isinstance('abcd',Iterable)
+   True
+      >>>isinstance([1,2,3,4],Iterable)
+   True
+   >>>isinstance(123,Iterable)
+   False
+   enumerate函数用来把list变为键值对，使其可以同时迭代key和value
+   for i,value in enumerate(['A','B','C','D']):
+      print(i,value)
+   0 A
+   1 B
+   2 C
+   3 D
+   
+   
+## 列表生成式
+   List Comprehensions列表生成式，例如liat[1,2,3...10]可使用list[range(1,11)]生成
+   [1*1,2*2,3*3...10*10]需使用循环生成[x*x for x in range(1,11)]
+   即把需生成的元素放到前面，后接for循环创建list，后面加上if语句可用以加上判断条件,例
+   [x*x for x in range(1,11) if x%2==0]
+   也可以嵌套使用
+   [m+n m for in 'abc' for n in 'xyz']
+   
