@@ -38,3 +38,22 @@
    也可以嵌套使用
    [m+n m for in 'abc' for n in 'xyz']
    
+   
+## 生成器
+   列表生成式可以生成list，生成器generator可以不创建完整的list，边循环边计算，创建方法：
+   - 把列表生成式[]改为()，例如：
+     >>>L=[x*x for x in range(10)]
+     [0,1,4,9,16,25,36,49,64,81]
+     >>>g=(x*x for x in range(10))
+     可使用next()方法获得generator的下一个返回值，无返回值时，抛出错误
+     for循环也可获取generator的结果
+   - 函数定义包含yield关键字，这个函数就是generator，即把print()改为yield
+     def fib(max):
+         n,a,b=0,0,1
+         while n<max:
+            yield b
+            a,b=b,a+b
+            n=n+1
+          return 'done'
+     函数是顺序执行，而generator则是每次调用next()至yield结束，下次从yield处继续执行
+     
