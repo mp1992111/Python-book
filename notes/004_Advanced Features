@@ -57,3 +57,13 @@
           return 'done'
      函数是顺序执行，而generator则是每次调用next()至yield结束，下次从yield处继续执行
      
+ ## 迭代器
+    - 可直接作用于for循环的对象统称为可迭代对象：Iterable
+      使用isinstance()判断一个对象是否为Iterable
+    - 生成器不但可以作用于for循环，还可被next()函数不断调用并返回下一个值
+      可以被next()函数调用并不断返回下一个值的对象称为迭代器:Iterator
+    生成器都是Iterator对象，但list、dict、str虽然是Itreable，却不是Iterator
+    可使用iter()函数将list、dict、str变为Iterator
+    
+    Python的for循环本质是通过不断调用next()函数实现的
+     
